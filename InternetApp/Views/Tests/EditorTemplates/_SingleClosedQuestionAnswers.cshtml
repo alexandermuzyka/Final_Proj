@@ -1,0 +1,10 @@
+﻿@model InternetApp.Models.ModelLogick.Question
+
+@using System.Web.Mvc;
+
+<ul>
+@foreach(var answ in Model.Answers)
+{
+    <li>@Html.CheckBoxFor(x => answ.IsRight) @answ.Text</li>
+}
+</ul>

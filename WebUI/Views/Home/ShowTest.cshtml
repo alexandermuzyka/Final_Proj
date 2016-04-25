@@ -1,0 +1,26 @@
+﻿@model WebUI.Models.Test
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowTest</title>
+</head>
+<body>
+    <div>
+        @using(Html.BeginForm())
+        {
+            <h1>Ответьте на все вопросы:</h1>
+            foreach(var question in Model.Questions)
+            {
+                question.GetHtmlPresentation();
+            }
+        }
+    </div>
+</body>
+</html>

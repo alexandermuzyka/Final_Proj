@@ -1,0 +1,24 @@
+﻿@model WebUI.Models.Model
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Список доступных тестов</h1>
+       
+        @foreach(var test in Model.Tests)
+        { 
+            @Html.ActionLink(test.Key, "ShowTest", test.Key); 
+        }
+    </div>
+</body>
+</html>
